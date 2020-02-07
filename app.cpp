@@ -50,8 +50,8 @@ int main() {
      */
 
     /* test Case comment out */
-    Cache s = Cache(4, 4, 4);
-    int data [8] =  {1024, 1024, 1028, 1028, 1032, 1036, 1040, 1041};
+    Cache s = Cache(4, 4, 4, Cache::cache_type::LRU);
+    vector<int> data =  {4,8,12,16,4,24,8,20};
     int i = 0;
     for (int val : data) {
         cout << "--------Reference " << i << "------------\n";
