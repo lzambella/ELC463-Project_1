@@ -10,7 +10,7 @@ using namespace std;
  */
 class Set {
     private:
-        virtual bool Find(int &) = 0;
+        virtual bool Find(unsigned long, unsigned long) = 0;
     public:
-        virtual bool AddReference(int &) = 0;
+        virtual bool AddReference(unsigned long, unsigned long) = 0;
 };
