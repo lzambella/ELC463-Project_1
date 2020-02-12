@@ -8,23 +8,24 @@
 
 #include <vector>
 #include "Set.h"
+#include "cache_entry.h"
 
 using namespace std;
 class LRUSet: public Set {
     private:
         // queue that fills with references
-        vector<int> data;
+        vector<CacheEntry> data;
         // Max size of the queue
         short max_size;
         /**
          * Search the queue for a specified value
          */
-        bool Find(int&);
+        bool Find(unsigned long, unsigned long);
     public:
         /**
          * Create a new LruSet object
          * @param set_size number of lines of data in the set
          */
-        LRUSet(int&);
-        bool AddReference(int&);
+        LRUSet(short);
+        bool AddReference(unsigned long, unsigned long);
 };

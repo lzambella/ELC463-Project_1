@@ -31,6 +31,8 @@ Cache::Cache(int L, int K, int N, Cache::cache_type type) {
         // Create a fifo/lru cache with k lines per set
         if (type == cache_type::FIFO)
             Cache::set.push_back(new FIFOSet(K));
+        else if (type == cache_type::LRU)
+            Cache::set.push_back(new LRUSet(K));
     }
 }
 
@@ -125,5 +127,22 @@ unsigned int Cache::getTag(unsigned long addr) {
 
     // Shift back to end
     res = res.operator>>=(Cache::offsetSize + Cache::indexSize);
+    delete & addrBits;
+    delete & tagMask;
+    
     return res.to_ullong();
+}
+
+// these can be optimized by returning pointers
+
+int Cache::getBytesPerLine() {
+    return Cache::L;
+}
+
+int Cache::getLinesPerSet() {
+    return Cache::K;
+}
+
+int Cache::getNumSets() {
+    return Cache::N;
 }

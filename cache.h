@@ -42,4 +42,8 @@ class Cache {
         Cache(int, int, int, cache_type);
         //void LoadMem (int); // Load from memory into its proper cache location (int MemAddr)
         void LoadMem(unsigned long); // add mem ref to cache
+
+        int getBytesPerLine();
+        int getLinesPerSet();
+        int getNumSets();
 };
