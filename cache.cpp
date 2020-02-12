@@ -32,7 +32,6 @@ Cache::Cache(int L, int K, int N, Cache::cache_type type) {
         if (type == cache_type::FIFO)
             Cache::set.push_back(new FIFOSet(K));
     }
-    cout << "Created Hashmap of set pointers\n";
 }
 
 /**
@@ -52,8 +51,11 @@ void Cache::LoadMem(unsigned long addr) {
 
     // attempt to load the values into the cache
     // get the index of the set the address should be added to...
+    // this might not be needed as the index is defined by its size
     int set_index = index % N;
 
+    //cout << std::dec << "Index: " << index << " Set_index: " << set_index << "\n";
+    
     // get a pointer to that set and add a cacheEntry to it
     Set * ptr = Cache::set[set_index];
 
@@ -81,8 +83,6 @@ unsigned int Cache::getOffset(unsigned long addr) {
     bitset<32> bitAddr(addr);
     bitset<32> res = offsetBits.operator&=(bitAddr);
 
-    cout << "Offset of address: " << res << "\n"; 
-
     return res.to_ulong();
 }
 
@@ -105,7 +105,6 @@ unsigned int Cache::getIndex(unsigned long addr) {
 
     // shift it right by the offset size so we have the actual value of the bits
     res = res.operator>>=(Cache::offsetSize);
-    cout << "Final res: " << res << "\n";
 
     return res.to_ulong();
 }
@@ -126,6 +125,5 @@ unsigned int Cache::getTag(unsigned long addr) {
 
     // Shift back to end
     res = res.operator>>=(Cache::offsetSize + Cache::indexSize);
-    cout << "Final result: " << res << "\n";
     return res.to_ullong();
 }

@@ -4,6 +4,7 @@
 #include "cache.h"
 
 using namespace std;
+
 // 60k 12-bit words
 // the addresses of the trace file are big endian
 int main() {
@@ -21,7 +22,6 @@ int main() {
      // KN refers to the total number of lines
 
      */
-    Cache s = Cache(8, 2, 32, Cache::cache_type::FIFO);
 
     /*
     cout << "Results:\n" << "Hits: " << s.hit_count << "\nMisses: " << s.miss_count << "\n";
@@ -45,6 +45,11 @@ int main() {
         s.LoadMem(addr);
     }
     */
+    int L = 8;
+    int K = 2;
+    int N = 32;
+    Cache s = Cache(L, K, N, Cache::cache_type::FIFO);
+    printf("Bytes per line: %d\nLines per set: %d\nNumber of sets: %d", L, K, N);
     streampos size;
     char * memblock;
     ifstream file ("TRACE1.DAT", ios::in|ios::binary|ios::ate);
@@ -66,7 +71,7 @@ int main() {
                 if (!(i == 0))
                     addr = addr << 8;
             }
-            cout << "Full address: " << std::hex << addr << "\n";
+            //cout << "Full address: " << std::hex << addr << "\n";
             s.LoadMem(addr);
         }
             

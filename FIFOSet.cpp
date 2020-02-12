@@ -27,11 +27,11 @@ bool FIFOSet::AddReference(unsigned long tag, unsigned long offset) {
 
     if (FIFOSet::Find(tag, offset)) {
         // Hit
-        cout << "Cache Hit\n";
+        //cout << "Cache Hit\n";
         return 1;
     }
     else if (FIFOSet::set_data.size() == max_size) {
-        cout << "Miss\nCache full, Popping queue\n";
+        //cout << "Miss\nCache full, Popping queue\n";
         // Remove the first in queue before adding anything else
         FIFOSet::set_data.pop();
         FIFOSet::set_data.push(CacheEntry(tag, offset));
@@ -40,7 +40,7 @@ bool FIFOSet::AddReference(unsigned long tag, unsigned long offset) {
     else {
         // Add the data to the non-full queue
         FIFOSet::set_data.push(CacheEntry(tag, offset));
-        cout << "Miss\nAdded reference\n";
+        //cout << "Miss\nAdded reference\n";
         return 0;
     }
 }
