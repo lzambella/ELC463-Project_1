@@ -1,0 +1,116 @@
+Opening file
+FIFO Cache configurations.
+------Configuration 1-------
+Bytes per Lines: 8
+Lines per set: 2
+Number of sets: 32
+Miss rate: 0.638919
+-----------------------------
+
+------Configuration 2-------
+Bytes per Lines: 8
+Lines per set: 4
+Number of sets: 16
+Miss rate: 0.565181
+-----------------------------
+
+------Configuration 3-------
+Bytes per Lines: 8
+Lines per set: 8
+Number of sets: 8
+Miss rate: 0.443601
+-----------------------------
+
+------Configuration 4-------
+Bytes per Lines: 8
+Lines per set: 16
+Number of sets: 4
+Miss rate: 0.375884
+-----------------------------
+
+------Configuration 5-------
+Bytes per Lines: 8
+Lines per set: 2
+Number of sets: 128
+Miss rate: 0.550654
+-----------------------------
+
+------Configuration 6-------
+Bytes per Lines: 8
+Lines per set: 4
+Number of sets: 64
+Miss rate: 0.469342
+-----------------------------
+
+------Configuration 7-------
+Bytes per Lines: 8
+Lines per set: 8
+Number of sets: 32
+Miss rate: 0.365481
+-----------------------------
+
+------Configuration 8-------
+Bytes per Lines: 8
+Lines per set: 16
+Number of sets: 16
+Miss rate: 0.297730
+-----------------------------
+
+LRU Cache configurations
+------Configuration 0-------
+Bytes per Lines: 8
+Lines per set: 2
+Number of sets: 32
+Miss rate: 0.630361
+-----------------------------
+
+------Configuration 1-------
+Bytes per Lines: 8
+Lines per set: 4
+Number of sets: 16
+Miss rate: 0.561333
+-----------------------------
+
+------Configuration 2-------
+Bytes per Lines: 8
+Lines per set: 8
+Number of sets: 8
+Miss rate: 0.443843
+-----------------------------
+
+------Configuration 3-------
+Bytes per Lines: 8
+Lines per set: 16
+Number of sets: 4
+Miss rate: 0.372917
+-----------------------------
+
+------Configuration 4-------
+Bytes per Lines: 8
+Lines per set: 2
+Number of sets: 128
+Miss rate: 0.548256
+-----------------------------
+
+------Configuration 5-------
+Bytes per Lines: 8
+Lines per set: 4
+Number of sets: 64
+Miss rate: 0.470343
+-----------------------------
+
+------Configuration 6-------
+Bytes per Lines: 8
+Lines per set: 8
+Number of sets: 32
+Miss rate: 0.366499
+-----------------------------
+
+------Configuration 7-------
+Bytes per Lines: 8
+Lines per set: 16
+Number of sets: 16
+Miss rate: 0.293744
+-----------------------------
+
+

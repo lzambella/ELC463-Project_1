@@ -105,7 +105,7 @@ int main() {
 
         printf("LRU Cache configurations\n");
         count = 0;
-        for (Cache c : cachConfigs) {
+        for (Cache c : lru_configs) {
             for (int x = 0; x < size; x+=3){
                 long addr = 0;
                 // Load the next 3 bytes in reverse order
