@@ -127,8 +127,6 @@ unsigned int Cache::getTag(unsigned long addr) {
 
     // Shift back to end
     res = res.operator>>=(Cache::offsetSize + Cache::indexSize);
-    delete & addrBits;
-    delete & tagMask;
     
     return res.to_ullong();
 }

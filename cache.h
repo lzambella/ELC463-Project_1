@@ -30,7 +30,7 @@ class Cache {
         unsigned int getOffset(unsigned long);
         unsigned int getIndex(unsigned long);
         unsigned int getTag(unsigned long);
-
+        
     public:
         enum cache_type {
             FIFO,
@@ -46,4 +46,6 @@ class Cache {
         int getBytesPerLine();
         int getLinesPerSet();
         int getNumSets();
+
+        cache_type getType();
 };
