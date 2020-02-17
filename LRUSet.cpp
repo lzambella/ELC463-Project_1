@@ -1,8 +1,6 @@
 /*
     Cache set for n-way set associative cache using LRU policy
-    Make this an interface instead?
 */
-
 #include "LRUSet.h"
 using namespace std;
 
@@ -11,7 +9,6 @@ LRUSet::LRUSet(short set_size) {
     LRUSet::max_size = set_size;
     LRUSet::data = vector<CacheEntry>();
 }
-
 bool LRUSet::AddReference(unsigned long tag, unsigned long offset) {
     if (LRUSet::Find(tag, offset)) {
         // If the reference is in the queue then return a hit
@@ -44,14 +41,9 @@ bool LRUSet::AddReference(unsigned long tag, unsigned long offset) {
 *  Uses a pass by value to copy the given queue variable so the original one stays unmodified.
 */
 bool LRUSet::Find(unsigned long tag, unsigned long offset) {
-
     for (CacheEntry e : LRUSet::data) {
-
-
-
         // compare the tag to the stored tag
         if (e.getTag() == tag) return 1;
-
     }
     return 0;
 }

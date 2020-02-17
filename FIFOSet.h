@@ -2,7 +2,7 @@
 
 #include <queue>
 #include "Set.h"
-#include "cache_entry.h"
+#include "CacheEntry.h"
 #include <string.h>
 
 using namespace std;

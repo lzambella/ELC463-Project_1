@@ -8,7 +8,7 @@
 
 #include <vector>
 #include "Set.h"
-#include "cache_entry.h"
+#include "CacheEntry.h"
 
 using namespace std;
 class LRUSet: public Set {

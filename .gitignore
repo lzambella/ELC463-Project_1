@@ -1,3 +1,13 @@
 ./binaries/cache_sim
 binaries/cache_sim
 binaries/cache_sim
+code.aux
+code.fdb_latexmk
+code.fls
+code.log
+code.pdf
+code.synctex.gz
+code.tex
+output_trace2.txt
+TRACE2.DAT
+binaries/cache_sim
